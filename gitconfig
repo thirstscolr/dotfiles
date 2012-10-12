@@ -1,0 +1,10 @@
+[user]
+	name = Tom Daniels
+	email = tom@isecpartners.com
+	signingkey = 5386152A
+[merge]
+	tool = opendiff
+[color]
+	ui = auto
+[alias]
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit
