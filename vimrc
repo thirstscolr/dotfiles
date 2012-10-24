@@ -16,6 +16,7 @@ Bundle 'snipMate'
 Bundle 'LaTeX-Suite-aka-Vim-LaTeX'
 Bundle 'cscope.vim'
 Bundle 'Tag-Signature-Balloons'
+Bundle 'Wombat'
 
 set cc=+1
 
