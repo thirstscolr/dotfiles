@@ -7,6 +7,7 @@
 source /usr/local/Cellar/git/1.7.10.1/etc/bash_completion.d/git-completion.bash
 
 # Add /usr/local/sbin to the PATH
+export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:/var/lib/gitolite/bin
 
@@ -42,6 +43,7 @@ alias grep='grep --color=auto'
 alias type='type -all'
 alias path='echo $PATH'
 alias savescreen='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
+alias brb='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
 alias ts='date -j -f "%a %b %d %T %Z %Y" "`date`" "+%s"'
 
 # Find a file with a pattern in name:
