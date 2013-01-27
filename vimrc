@@ -16,7 +16,10 @@ Bundle 'snipMate'
 Bundle 'LaTeX-Suite-aka-Vim-LaTeX'
 Bundle 'cscope.vim'
 Bundle 'Tag-Signature-Balloons'
-Bundle 'Wombat'
+Bundle 'ctrlp.vim'
+" other shwizz
+Bundle 'go-vim'
+Bundle 'scala-vim'
 
 set cc=+1
 
@@ -91,6 +94,9 @@ endif
 map <F10> :TagbarToggle<CR>   	       	       " open the tagbar with F10
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'  " Proper Ctags locations
 let g:tagbar_width=40
+
+" lets see if this helps vim recognize tex files
+let g:tex_flavor='latex'
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
