@@ -5,6 +5,7 @@
 #
 #===============================================================
 source /usr/local/Cellar/git/1.7.10.1/etc/bash_completion.d/git-completion.bash
+source /usr/local/Cellar/git/1.7.10.1/etc/bash_completion.d/git-prompt.sh
 
 # Add /usr/local/sbin to the PATH
 export PATH=$PATH:/usr/local/sbin
