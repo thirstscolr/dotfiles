@@ -4,7 +4,6 @@
 # Last modified: Fri Dec 03 19:12:34 PST 2010
 #
 #===============================================================
-source /usr/local/Cellar/git/1.7.10.1/etc/bash_completion.d/git-completion.bash
 
 # Add /usr/local/sbin to the PATH
 export PATH=/usr/local/bin:$PATH
@@ -15,9 +14,14 @@ export PATH=$PATH:/var/lib/gitolite/bin
 export PATH=$PATH:$HOME/pentest/mobile/android-sdk-macosx/tools
 export PATH=$PATH:$HOME/pentest/mobile/android-sdk-macosx/platform-tools
 
+# git bash completion
+source /usr/local/Cellar/git/1.7.10.1/etc/bash_completion.d/git-completion.bash
+# brew bash completion
+source /usr/local/Library/Contributions/brew_bash_completion.sh
+
 # Color settings
 export CLICOLOR=1
-export TERM=xterm color
+export TERM=xterm-256color
 export LSCOLORS=gxhxxxxxfxcxcxbxdxxxxx
 
 # Prompt settings
