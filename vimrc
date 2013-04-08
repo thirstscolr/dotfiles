@@ -40,7 +40,7 @@ set formatoptions=nrtq
 " set background=light
 " colorscheme desert
 " colorscheme solarized
-colorscheme wombat
+colorscheme jellybeans
 
 " set tags=tags such that the file in CWD is always used
 set tags=tags
