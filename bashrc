@@ -5,10 +5,8 @@
 #
 #===============================================================
 
-# Add /usr/local/sbin to the PATH
-export PATH=/usr/local/bin:$PATH
-export PATH=$PATH:/usr/local/sbin
-export PATH=$PATH:/var/lib/gitolite/bin
+# latex build tools
+export PATH=$PATH:/usr/local/texlive/2012/bin/universal-darwin
 
 # Add Android tools to the PATH
 export PATH=$PATH:$HOME/pentest/mobile/android-sdk-macosx/tools

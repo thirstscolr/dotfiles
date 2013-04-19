@@ -52,6 +52,14 @@ map <F3> :w<CR> :!make view<CR>
 map <F4> :NERDTreeToggle<CR>
 map ** gwap
 
+" davids spellcheck bindings
+map <F5> [s1z=<C-o>
+imap <F5> [s1z=<C-o>i
+
+" Keep selected blocks selected when shifting (more from dr thiel).
+vmap > >gv
+vmap < <gv
+
 " latex specific bindings
 map tt i{\tt <Esc>wea}<Esc>
 
