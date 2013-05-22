@@ -5,6 +5,9 @@
 #
 #===============================================================
 
+# let brew run the show
+export PATH=/usr/local/bin:$PATH
+
 # latex build tools
 export PATH=$PATH:/usr/local/texlive/2012/bin/universal-darwin
 
@@ -46,6 +49,7 @@ alias type='type -all'
 alias path='echo $PATH'
 alias savescreen='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
 alias brb='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine'
+alias sreep='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 alias ts='date -j -f "%a %b %d %T %Z %Y" "`date`" "+%s"'
 
 # Find a file with a pattern in name:
@@ -80,7 +84,18 @@ function ii()
 	echo -e "\n\033[0:36men1 IP Address :$NC\033[0m" ; echo ${MY_IPW:-"Not connected"}
 	echo
 }
-	
+
+# Locks down a thumb drive so that Mac OS X will not write any metadata to it.
+macosx_lockdown_drive() {
+       srm -r -s -v .Trashes
+       touch .Trashes
+       srm -r -s -v .fseventsd
+       touch .fseventsd
+       srm -r -s -v .Spotlight-V100
+       touch .Spotlight-V100
+       touch .metadata_never_index
+}
+
 # Set runtime environment
 my_ip 2>&- ;
 
