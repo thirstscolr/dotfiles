@@ -45,6 +45,10 @@ colorscheme jellybeans
 " set tags=tags such that the file in CWD is always used
 set tags=tags
 
+" cd to the cwd of the viewed file
+nmap cd :lcd %:h \| :pwd<CR>
+nmap <Leader>x :call system("cd `dirname %` && /Applications/Utilities/iTerm.app/Contents/MacOS/iTerm")<CR>
+
 " key bind popular cmds
 map <F8> :w<CR> :!make<CR>
 map <F2> :set number!<CR> :set foldcolumn=0<CR>
@@ -105,6 +109,16 @@ let g:tagbar_width=40
 
 " lets see if this helps vim recognize tex files
 let g:tex_flavor='latex'
+
+
+" more lxcode badassery
+" call graudit with a particular db and load results in qf
+command! -nargs=1 Graudit call Graudit(<f-args>)
+function! Graudit(db)
+    call system("$HOME/isp-all/isec/tools/misc/graudit/graudit -c0 -x 'cscope.*' -x 'tags' -z -d " . a:db . " . > /tmp/graudit.out")
+    copen
+    cf /tmp/graudit.out
+endfunction
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
