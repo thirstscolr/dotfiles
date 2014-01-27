@@ -17,9 +17,7 @@ Bundle 'LaTeX-Suite-aka-Vim-LaTeX'
 Bundle 'cscope.vim'
 Bundle 'Tag-Signature-Balloons'
 Bundle 'ctrlp.vim'
-" other shwizz
-Bundle 'go-vim'
-Bundle 'scala-vim'
+Bundle 'jellybeans.vim'
 
 set cc=+1
 
@@ -64,8 +62,10 @@ imap <F5> [s1z=<C-o>i
 vmap > >gv
 vmap < <gv
 
-" latex specific bindings
-map tt i{\tt <Esc>wea}<Esc>
+" golang bindings
+filetype off " force relaod of runtimepath
+filetype plugin indent off
+set runtimepath+=/usr/local/go/misc/vim
 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -115,7 +115,7 @@ let g:tex_flavor='latex'
 " call graudit with a particular db and load results in qf
 command! -nargs=1 Graudit call Graudit(<f-args>)
 function! Graudit(db)
-    call system("$HOME/isp-all/isec/tools/misc/graudit/graudit -c0 -x 'cscope.*' -x 'tags' -z -d " . a:db . " . > /tmp/graudit.out")
+    call system("$HOME/Git/isec/tools/misc/graudit/graudit -c0 -x 'cscope.*' -x 'tags' -z -d " . a:db . " . > /tmp/graudit.out")
     copen
     cf /tmp/graudit.out
 endfunction

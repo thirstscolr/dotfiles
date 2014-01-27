@@ -9,14 +9,11 @@
 export PATH=/usr/local/bin:$PATH
 
 # latex build tools
-export PATH=$PATH:/usr/local/texlive/2012/bin/universal-darwin
-
-# Add Android tools to the PATH
-export PATH=$PATH:$HOME/pentest/mobile/android-sdk-macosx/tools
-export PATH=$PATH:$HOME/pentest/mobile/android-sdk-macosx/platform-tools
+export PATH=$PATH:/usr/local/texlive/2013/bin/universal-darwin
 
 # git bash completion
-source /usr/local/Cellar/git/1.7.10.1/etc/bash_completion.d/git-completion.bash
+source /usr/local/Cellar/git/1.8.4.2/etc/bash_completion.d/git-completion.bash
+source /usr/local/Cellar/git/1.8.4.2/etc/bash_completion.d/git-prompt.sh
 # brew bash completion
 source /usr/local/Library/Contributions/brew_bash_completion.sh
 
